@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100vh;
+}
+
+body {
+    background-color: rgb(12,12,12);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#countdown {
+    text-align: center;
+}
+#time {
+    display: flex;
+    justify-content: space-around;
+}
+#time > div {
+    display: flex;
+    flex-direction: column;
+}
+#time > div > span {
+    font-size: 3rem;
+}
