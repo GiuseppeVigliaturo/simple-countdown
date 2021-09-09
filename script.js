@@ -1,5 +1,5 @@
 const indicatori = document.querySelectorAll('#time span'),
-    scadenza = new Date(2021, 8, 9,19,34,0),
+    scadenza = new Date(2021, 8, 9,19,50,0),
     ms_scadenza = scadenza.getTime(),
     ms_giorno = 24*60*60*1000,
     ms_in_ora= 60*60*1000,
@@ -20,7 +20,9 @@ function countdown() {
 
      if (ms_rimanenti <= 0 ) {
             document.getElementById('event').textContent = "Evento iniziato";
-            document.getElementById('time').style.display = "none";
+            // document.getElementById('time').style.display = "none";
+            clearInterval(countdownInterval);
+            return;
         }
         else{
             indicatori.forEach((span,index) => {
